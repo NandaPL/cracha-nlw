@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernanda Lopes - DoWhile 2021</title>
+
     <link rel="stylesheet" href="styles/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Fernanda Lopes - DoWhile 2021</title>
   </head>
   <body>
     <main>
@@ -29,8 +30,10 @@
             alt="Minha foto (uma garota de cabelo curto, usando óculos em um fundo roxo usando uma roupa preta)"
           />
         </div>
-        <h1>Fernanda Lopes</h1>
-        <a href="https://github.com/NandaPL">
+
+        <h1 id="userName">Fernanda Lopes</h1>
+
+        <a href="https://github.com/NandaPL" target="_blank">
           <img src="images/git.svg" alt="icone github" />
           NandaPL
         </a>
@@ -40,38 +43,45 @@
           web programming
         </p>
 
-        <!--Estrutura de lista-->
-        <!--Não ordenada-->
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/nandap_l/">
-              <img
-                src="/images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="instagram">
+            <a target="_blank" href="https://instagram.com/maykbrito">
+              <img src="/images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/fernandapintolopes.lopes/">
-              <img
-                src="/images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
+
+          <li class="facebook">
+            <a target="_blank" href="https://facebook.com/maykbrito">
+              <img src="/images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/nandap_l">
-              <img
-                src="/images/twitter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+
+          <li class="twitter">
+            <a target="_blank" href="https://twitter.com/maykbrito">
+              <img src="/images/twitter.svg" alt="ícone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <!-- Criação de script JS -->
+    <script>
+      const linksSocialMedia = {
+        github: 'NandaPL',
+        instagram: 'nandap_l',
+        facebook: 'fernandapintolopes.lopes',
+        twitter: 'nandap_l'
+      }
+
+      function changeSocialMedia() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMedia()
+    </script>
   </body>
 </html>
