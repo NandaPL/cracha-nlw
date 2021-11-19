@@ -26,19 +26,20 @@
           </span>
 
           <img
-            src="/images/eu.svg"
+            src="https://lorempixel.com/185/185/people/"
             alt="Minha foto (uma garota de cabelo curto, usando óculos em um fundo roxo usando uma roupa preta)"
+            id="userPhoto"
           />
         </div>
 
-        <h1 id="userName">Fernanda Lopes</h1>
+        <h1 id="userName">Mayk</h1>
 
-        <a href="https://github.com/NandaPL" target="_blank">
+        <a id="userLink" href="https://github.com/NandaPL" target="_blank">
           <img src="images/git.svg" alt="icone github" />
-          NandaPL
+          <span id="userLogin">maykbrito</span>
         </a>
 
-        <p>
+        <p id="userBio">
           Student of information technology with curiosity and desire to learn
           web programming
         </p>
@@ -66,22 +67,6 @@
     </main>
 
     <!-- Criação de script JS -->
-    <script>
-      const linksSocialMedia = {
-        github: 'NandaPL',
-        instagram: 'nandap_l',
-        facebook: 'fernandapintolopes.lopes',
-        twitter: 'nandap_l'
-      }
-
-      function changeSocialMedia() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-        }
-      }
-
-      changeSocialMedia()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
