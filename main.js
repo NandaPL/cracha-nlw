@@ -26,6 +26,7 @@ function getGitHubProfileInfo() {
       userLink.href = data.html_url
       userPhoto.src = data.avatar_url
       userLogin.textContent = data.login
+      title.textContent = `${data.name} - DoWhile 2021`
     })
 }
 
